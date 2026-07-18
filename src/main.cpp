@@ -101,6 +101,8 @@ public:
 
 LGFX tft;
 
+
+// Calulate the distance between two points on the Earth using the Haversine formula
 double distanceMeters(
   double lat1,
   double lon1,
@@ -125,6 +127,7 @@ double distanceMeters(
 // ADSBdb LOOKUPS
 // =====================
 
+// Gerneric HTTP GET function that returns the response body as a String
 String httpGetString(const String& url) {
   HTTPClient http;
   http.begin(url);
@@ -162,6 +165,7 @@ String httpGetString(const String& url) {
   return "";
 }
 
+// Lookup aircraft information by its hexadecimal code using the ADSBdb API
 JsonVariant lookupAircraftByHex(const String& hex) {
   aircraftLookupDoc.clear();
   if (hex.length() == 0) {
@@ -225,6 +229,7 @@ JsonVariant lookupAircraftByHex(const String& hex) {
   return aircraftLookupDoc["response"]["aircraft"];
 }
 
+// Lookup route information by its callsign using the ADSBdb API
 JsonVariant lookupRouteByCallsign(const String& callsign) {
   routeLookupDoc.clear();
   if (callsign.length() == 0) {
@@ -327,6 +332,7 @@ JsonVariant lookupRouteByCallsign(const String& callsign) {
   return routeLookupDoc["response"];
 }
 
+// Draw a WiFi icon on the TFT display at the specified coordinates, indicating connection status
 void drawWiFiIcon(
   int x,
   int y,
@@ -391,25 +397,8 @@ void drawWiFiIcon(
   }
 }
 
-void showMessage(
-  uint16_t bgColor,
-  const String& line1,
-  const String& line2 = "") {
-  tft.fillScreen(bgColor);
-  tft.setTextColor(TFT_WHITE, bgColor);
-  tft.setTextSize(2);
-
-  tft.drawString(line1, 10, 20);
-
-  if (line2.length() > 0) {
-    tft.drawString(line2, 10, 50);
-  }
-}
-
+// Connect to WiFi and display connection status on the TFT display
 void connectToWiFi() {
-  // Use WiFi.mode for compatibility with the WiFiClass API
-  //WiFi..mode(WIFI_STA);
-  // Disable WiFi sleep if supported (older cores may not have setSleep)
   #ifdef ARDUINO_ARCH_ESP8266
   WiFi.setSleep(false);
   #endif
