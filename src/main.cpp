@@ -4,23 +4,10 @@
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
 #include <math.h>
-
-
-// Use C strings for WiFi functions compatibility
-char ssid[] = "Olga_und_Michael";
-char password[] = "2240527575954629";
+#include "secrets.h"
 
 // Delay between scans
 const int seconds = 10;
-
-// your locaL coordinates
-const double local_lat = 49.0735;
-const double local_lon = 8.7466;
-const double local_alt_meter = 205;
-
-// replace yb your feeder IP or name
-const char* aircraftUrl =
-  "http://fr24feed2/dump1090/data/aircraft.json";
 
 int NumberOfAircraftSeen = 0;
 double minDist = 999;
