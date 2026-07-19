@@ -26,4 +26,4 @@ There is only one single program for the whole thing and one file for the creden
 
 * _main.cpp_ for the main program
 * _secrets_template.h_ provided as a template for _secrets.h_, which is not provided here
-* _secrets.h_ to be copied from _secretes_template.h_ and replace all data with our credentials and local settings
+* _secrets.h_ to be copied from _secrets_template.h_ and replace all data with our credentials and local settings
