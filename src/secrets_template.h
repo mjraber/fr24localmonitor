@@ -12,3 +12,6 @@ const char* aircraftUrl =
 const double local_lat = 49.0000;
 const double local_lon = 8.0000;
 const double local_alt_meter = 100;
+
+// Delay between scans
+const int seconds = 10;

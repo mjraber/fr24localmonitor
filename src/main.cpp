@@ -6,9 +6,6 @@
 #include <math.h>
 #include "secrets.h"
 
-// Delay between scans
-const int seconds = 10;
-
 int NumberOfAircraftSeen = 0;
 double minDist = 999;
 double maxDist = 0;

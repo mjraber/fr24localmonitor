@@ -8,25 +8,25 @@
 * Some cables
 * Enclosure components (3D printed)
 
-### Connection ESP32-Display (Cabling)
+### Cabling
 * EPS32 PowerSupply through USB
 
-Display to ESP32 connections:
-* 5V    === 5V 
-* GND   === GND
-* RD    === inactive
-* WR    === 26
-* RS    === 25
-* CS    === 33
-* RST   === 32
-* D0    === 16
-* D1    === 17
-* D2    === 18
-* D3    === 19
-* D4    === 21
-* D5    === 22
-* D6    === 23
-* D7    === 15
+### Display to ESP32 connections
+* 5V &harr; 5V 
+* GND &harr; GND
+* RD &harr; inactive
+* WR &harr; 26
+* RS &harr; 25
+* CS &harr; 33
+* RST &harr; 32
+* D0 &harr; 16
+* D1 &harr; 17
+* D2 &harr; 18
+* D3 &harr; 19
+* D4 &harr; 21
+* D5 &harr; 22
+* D6 &harr; 23
+* D7 &harr; 15
 
 ### 3D-Printing
 
