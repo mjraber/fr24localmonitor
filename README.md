@@ -33,8 +33,7 @@
 In my project, I used a Anycubic i3 Mega S, but you can use any other 3D printer, maybe with some adaption of parameters.
 
 In the files-folder:
-* f3d-files
-* stl-files
+* Demo-Video
 * Brother-Label for Pinout
 
 ## Software
